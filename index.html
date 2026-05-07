@@ -23,6 +23,7 @@
 :root{
   --nav-h: 60px;
 
+  --feature-color: #4a90d9;
 	--bg-color: #F8F8F8;
   --bg-hover-color: #F0F0F0;
 	--onbg-color: #333;
@@ -136,7 +137,7 @@ section{
   /* background-color: red; */
 }
 #input-page{
-  background-color: blue;
+  /* background-color: blue; */
 }
 #inference-page{
   background-color: green;
@@ -144,6 +145,7 @@ section{
 
 </style>
 <link rel="stylesheet" href="css/table-page.css">
+<link rel="stylesheet" href="css/input-page.css">
 </head>
 <body>
   <main id="main-page">
@@ -176,12 +178,21 @@ section{
       </label>
     </nav>
 
+    <!-- table-page -->
     <section id="table-page">
 
     </section>
+
+    <!-- input-page -->
     <section id="input-page">
-      
+      <textarea id="input" placeholder="在此输入文本..."></textarea>
+      <div class="mode-group">
+        <label><input type="radio" name="mode" value="normal" checked><span>普通文本</span></label>
+        <label><input type="radio" name="mode" value="heartcraft"><span>Heartcraft</span></label>
+        <label><input type="radio" name="mode" value="terra"><span>Terra</span></label>
+      </div>
     </section>
+
     <section id="inference-page">
       
     </section>
@@ -190,6 +201,7 @@ section{
 
 </body>
 <script src="js/watch_radio_group.js"></script>
+<script src="js/lc.js"></script>
 <script>
 
 const nav = watchRadioGroup("nav");
@@ -295,4 +307,5 @@ const data = [
 
 </script>
 <script src="js/table-page.js"></script>
+<script src="js/input-page.js"></script>
 </html>
