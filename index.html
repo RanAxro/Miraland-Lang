@@ -23,8 +23,10 @@
 :root{
   --nav-h: 60px;
 
-	--bg-color: #E9E9E9;
+	--bg-color: #F8F8F8;
+  --bg-hover-color: #F0F0F0;
 	--onbg-color: #333;
+  --bg-line-color: #E0E0E0;
 	--ct-color: #EEE;
 	--onct-color: #CCC;
 
@@ -79,7 +81,7 @@ body{
   pointer-events: none;
 }
 .nav-btn{
-  /* height: 20px; */
+  line-height: var(--nav-h);
   color: var(--onbg-color);
   font-size: 20px;
   font-weight: 300;
@@ -125,11 +127,13 @@ section{
   top: var(--nav-h);
   width: 100%;
   height: calc(100% - var(--nav-h));
+  background-color: var(--bg-color);
   display: none;
+  overflow-y: auto;
 }
 
 #table-page{
-  background-color: red;
+  /* background-color: red; */
 }
 #input-page{
   background-color: blue;
@@ -139,6 +143,7 @@ section{
 }
 
 </style>
+<link rel="stylesheet" href="css/table-page.css">
 </head>
 <body>
   <main id="main-page">
@@ -221,7 +226,7 @@ nav.onUnselectedById("nav-btn-inference", (e) => {
   document.getElementById("inference-page").style.display = "none";
 });
 
-const f = [
+const data = [
 { char: "\uf034", name: "Miraland-0", group: "miraland", displayName: "0" },
 { char: "\uf035", name: "Miraland-1", group: "miraland", displayName: "1" },
 { char: "\uf036", name: "Miraland-2", group: "miraland", displayName: "2" },
@@ -285,5 +290,27 @@ const f = [
 { char: "\uf018", name: "TerraAlliance-Y", group: "terra", displayName: "Y" },
 { char: "\uf019", name: "TerraAlliance-Z", group: "terra", displayName: "Z" },
 ]
+
+
+
+const groups = {};
+data.forEach(item => {
+    (groups[item.group] ||= []).push(item);
+});
+
+document.getElementById('table-page').innerHTML = Object.entries(groups).map(([name, items]) => `
+  <div class="group">
+    <div class="group-title">${name}</div>
+    <div class="grid">
+      ${items.map(i => `
+        <div class="cell">
+          <div class="char">${i.char}</div>
+          <div class="name">${i.displayName}</div>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+`).join('');
+
 </script>
 </html>
