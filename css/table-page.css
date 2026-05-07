@@ -1,4 +1,4 @@
-.group {
+.group{
   margin-bottom: 30px;
   border-radius: 12px;
   padding: 20px;
@@ -25,12 +25,12 @@
   text-align: center;
   transition: all 0.2s;
 }
-.cell:hover {
+.cell:hover{
   background: var(--bg-hover-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-.char {
+.char{
   font-size: 42px;
   color: var(--onbg-color);
   line-height: 1.2;
