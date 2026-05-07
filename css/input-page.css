@@ -3,7 +3,7 @@
   padding: 14px 16px;
   border: 2px solid var(--bg-line-color);
   border-radius: 12px;
-  width: 100%;
+  width: calc(100% - 36px);
   height: 80%;
   background-color: var(--bg-color);
   font-size: 32px;

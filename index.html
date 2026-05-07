@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 <style>
 @font-face{
   font-family: "Miraland";
@@ -172,6 +173,10 @@ section{
         <input id="nav-btn-recognition" type="radio" name="nav" value="recognition">
         <span>识别</span>
       </label>
+      <label class="nav-btn">
+        <input id="nav-btn-about" type="radio" name="nav" value="about">
+        <span>关于</span>
+      </label>
     </nav>
 
     <!-- table-page -->
@@ -183,9 +188,9 @@ section{
     <section id="input-page">
       <textarea id="input" placeholder="在此输入文本..."></textarea>
       <div class="mode-group">
-        <label><input type="radio" name="mode" value="normal" checked><span>普通文本</span></label>
-        <label><input type="radio" name="mode" value="heartcraft"><span>Heartcraft</span></label>
-        <label><input type="radio" name="mode" value="terra"><span>Terra</span></label>
+        <label><input type="radio" name="mode" value="normal"><span>普通文本</span></label>
+        <label><input type="radio" name="mode" value="heartcraft" checked><span>Heartcraft Kingdom</span></label>
+        <label><input type="radio" name="mode" value="terra"><span>Terra Alliance</span></label>
       </div>
     </section>
 
@@ -198,6 +203,18 @@ section{
     <section id="recognition-page">
 
       <div style="padding-top: 60px; text-align: center;">OCR识别功能正在制作中... 敬请期待！</div>
+    </section>
+
+    <!-- about-page -->
+    <section id="about-page">
+
+      <div style="padding-top: 20px; text-align: center;"><img src="assets/favicon.svg" alt="Miraland-Lang" width="80"></div>
+      <h2 style="text-align: center;">Miraland-Lang</h2>
+
+      <div style="padding-top: 60px; text-align: center;">本网站及所有资源开源于github <a href="https://github.com/RanAxro/Miraland-Lang">Miraland-Lang</a></div>
+
+      <div style="padding-top: 20px; text-align: center;">所有游戏素材仅供学习交流使用, 版权归属[芜湖叠纸网络科技有限公司]</div>
+      <div style="text-align: center;">如需商业使用, 请自行联系叠纸游戏获取授权</div>
     </section>
   </div>
 
@@ -248,6 +265,14 @@ nav.onSelectedById("nav-btn-recognition", (e) => {
 
 nav.onUnselectedById("nav-btn-recognition", (e) => {
   document.getElementById("recognition-page").style.display = "none";
+});
+
+nav.onSelectedById("nav-btn-about", (e) => {
+  document.getElementById("about-page").style.display = "block";
+});
+
+nav.onUnselectedById("nav-btn-about", (e) => {
+  document.getElementById("about-page").style.display = "none";
 });
 
 
