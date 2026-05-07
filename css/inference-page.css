@@ -1,0 +1,15 @@
+#inference-page .title{
+  margin: 10px 0 20px 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#inference-page img{
+  margin: 10px 0 30px 5%;
+  width: 90%;
+}
+
+#inference-page .des{
+  margin-left: 4%;
+  font-size: 24px;
+}
