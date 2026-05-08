@@ -219,13 +219,13 @@ const data = [
     "char": "\uf01a",
     "name": "HeartcraftKingdom-Unknown-1",
     "group": "Heartcraft Kingdom",
-    "displayName": ""
+    "displayName": " I"
   },
   {
     "char": "\uf01b",
     "name": "HeartcraftKingdom-Unknown-2",
     "group": "Heartcraft Kingdom",
-    "displayName": ""
+    "displayName": " O"
   },
   {
     "char": "\uf000",
