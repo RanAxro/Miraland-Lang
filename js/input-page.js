@@ -8,7 +8,7 @@ for (const item of data) {
   if (key !== key.toLowerCase()) maps[item.group][key.toLowerCase()] = val;
 }
 // heartcraft 和 terra 继承 miraland 的数字映射
-for (const mode of ['heartcraft', 'terra']) {
+for (const mode of ['Heartcraft Kingdom', 'Terra Alliance']) {
   Object.assign(maps[mode], maps.miraland);
 }
 
